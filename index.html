@@ -1,29 +1,30 @@
 <!doctype html>
 <html>
 <head>
-    <title>IFE-Task001</title>
+    <title>IFE-Task002</title>
     <meta charset="utf-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <style>
 
     body{
         font-family:Microsoft Yahei;
     }
-
 </style>
 
 <body>
     <!--标题导航区域-->
     <header>
-        <h1>网站一级标题</h1>
-        <ul>
-            <li><a>导航链接一</a></li>
-            <li><a>导航链接二</a></li>
-            <li><a>导航链接三</a></li>
-            <li><a>导航链接四</a></li>
-        </ul>
+        <nav>
+            <img id="logo" src="./images/logo.png" >
+            <ul id="right_nav">
+                <li><a>导航链接一</a></li>
+                <li><a>导航链接二</a></li>
+                <li><a>导航链接三</a></li>
+                <li><a>导航链接四</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <!--文章区域 01-->
@@ -32,11 +33,11 @@
                 <h2>文章一级标题</h2>
                 <h3>文章二级标题</h3>
             </hgroup>
-            <section>
-                <p>
+            <section class="content">
+                <div>
                     <span>文章作者</span> 
                     <span>文章发表时间</span>
-                </p>
+                </div>
                 <p>
                     这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,
                     <br>换行了
@@ -47,7 +48,7 @@
                     <strong>这里有个粗体字</strong>
                     这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落
                 </p>
-                <img src="./images/bear1.png" />
+                <img class="img-ctrl" src="./images/bear1.png" />
                 <p>
                     这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,换行了
                     <br>这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,
@@ -64,11 +65,11 @@
                 <h3>文章二级标题</h3>              
             </hgroup>
             
-            <section>
-                <p>
+            <section class="content">
+                <div>
                     <span>文章作者</span> 
                     <span>文章发表时间</span>
-                </p>
+                </div>
                 <p>
                     这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,
                     <br>换行了
@@ -79,12 +80,14 @@
                     <strong>这里有个粗体字</strong>
                     这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落,这是一个很长的段落
                 </p>    
-                <img src="./images/bear1.png" />
-                <ul>
+                <img class="img-ctrl" src="./images/bear1.png" />
+
+                <ul class="none-style">
                     <li>列表项目一</li>
                     <li>列表项目二</li>
                     <li>列表项目三</li>
                 </ul>
+
             </section>
         </article>
         <!--图片区域-->
@@ -92,7 +95,7 @@
             <hgroup>
                 <h2>图片</h1>
             </hgroup>
-            <section>
+            <section class='pic-content'>
                 <figure> 
                     <figcaption>好看的图</figcaption>
                     <img src="./images/bear1.png" />
@@ -127,8 +130,7 @@
                     <li>排名3</li>
                 </ol>
 
-                <p>下面是一个表格，给表格加了一个border="1"好让你看出来是一个表格</p>
-                <table border="1">
+                <table class="table-ctrl" border="1">
                     <thead>
                         <tr>
                             <td>表头</td>
@@ -157,62 +159,114 @@
                             <td>表内容单元格</td>
                             <td><a href="">操作</a></td>
                         </tr>
-                        <tr>
+                        <tr class="table-total">
                             <td>总计</td>
                             <td colspan="2">1000</td>
                         </tr>
                     </tbody>
                 </table>
-                <aside>
-                    <hgroup>
-                        <h2>这里以后是一个侧栏，这是侧栏的标题</h2>
-                        <h3>侧栏注册窗口标题</h3>
-                    </hgroup>
-                    <form>
-                        <div>
-                            <label for="email">请输入邮箱地址：</label>
+            </section>
+        </article>  
+                
+                
+        <article> 
+            <aside>
+                <hgroup>
+                    <h2 class="left-shadow">这里以后是一个侧栏，这是侧栏的标题</h2>
+                </hgroup>
+                <form class="form-ctrl">
+                    <div class="row">
+                        <div class="row-col-4 form-left ">
+                            <label  for="email">请输入邮箱地址</label>
+                        </div>
+                        <div class="row-col-8 form-right ">
                             <input id="email" type="text" placeholder="这是一个文本输入框" />
+                            <!--<div>邮箱地址请按照要求格式输入</div>-->
                         </div>
-                        <div>邮箱地址请按照要求格式输入</div>
-                        <div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="row-col-4 form-left ">
+                        </div>
+                        <div class="row-col-8 form-right ">
+                            <div class="hits">邮箱地址请按照要求格式输入</div>
+                        </div>       
+                    </div>
+                    
+                    <div class="row">
+                        <div class=" row-col-4 form-left">
                             <label for="pwd">请输入密码</label>
-                            <input id="pwd" type="password" placeholder="这是一个文本输入框" />
-                            <label for="pwd2">请重复输入密码</label>
-                            <input id="pwd2" type="password" placeholder="这是一个文本输入框" />
                         </div>
-                        <div>密码为6-16位英文数字</div>
-                        <div>
+                        <div class=" row-col-8 form-right ">
+                            <input id="pwd" type="password" placeholder="这是一个文本输入框" pattern="[A-z]" minlength="6" maxlength="16"/>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="row-col-4 form-left ">
+                            <label for="pwd2">请重复输入密码</label>
+                        </div>
+                        <div class="row-col-8 form-right ">
+                            <input id="pwd2" type="password" placeholder="这是一个文本输入框" pattern="[A-z]" minlength="6" maxlength="16"/>
+                        </div>
+                    </div>
+                    
+                   <div class="row">
+                        <div class="row-col-4 form-left ">
+                        </div>
+                        <div class="row-col-8 form-right ">
+                            <div class="hits">密码为6-16位英文数字</div>
+                        </div>       
+                    </div>
+                    
+                    <div class="row">
+                        <div class=" row-col-4 form-left">
                             <label for="gender">性别</label>
-                            
+                        </div>
+                        <div class=" row-col-8 form-right">
                             <input id="male" type="radio" value="male" name="gender" checked/>
                             <label for="male">男</label>
-                            
                             <input id="female"  type="radio" value="female" name="gender"/>
                             <label for="female">女</label>
-                        
                         </div>
-                        <div>
-                            <label for="city">城市:</label>
-                            <select id="city">
+                    </div>
+                    
+                    <div class="row">
+                        <div class=" row-col-4 form-left">
+                             <label for="city">城市:</label>
+                        </div>
+                        <div class=" row-col-8 form-right">
+                            <select id="city" multiple="multiple" size="1">
                                 <option>北京</option>
                                 <option>上海</option>
                                 <option>广州</option>
                             </select>
                         </div>
-                        <div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="form-left row-col-4">
                             <label>爱好</label>
+                        </div>
+                        <div class="form-right row-col-8">
                             <input id="hobby1" type="checkbox">运动</input>
                             <input id="hobby2" type="checkbox">艺术</input>
                             <input id="hobby3" type="checkbox">科学</input>
                         </div>
-                        <div>
+                    </div>  
+                    
+                    
+                    <div class="row">
+                        <div class="form-left row-col-4">
                             <label>个人描述</label>
+                        </div>
+                        <div class="form-right row-col-8">
                             <textarea placeholder="这是一个多行输入框，输入您的个人描述"></textarea>
                         </div>
-                        <input type="submit" value="确认提交"/>
-                    </form>
-                </aside>
-            </section>
+                    </div>
+                    <input class="row btn" type="submit" value="确认提交"/>
+                </form>
+            </aside>
         </article>
     </main>
     

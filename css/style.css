@@ -3,23 +3,146 @@
     padding: 0;
 }
 
+body{
+    background-color: #bbb;
+}
+
 header{
     width:100%;
     height: 60px;
     background-color: #333;
     color:#fff;
 }
-header h1,header ul,header ul li{
+#logo{
+    height: 40px;
+    width:auto;
     display: inline;
+    float:left;
+    padding:10px 20px 10px 20px;
 }
-header h1{
-    float: left;
-    padding:9px 9px 9px 9px;
-}
-header ul{
+#right_nav{
     float: right;
     right:10px;
     font-size:14px;
     padding:20px 20px 20px 20px;
     /*顺时针*/
+}
+#right_nav li{
+    display: inline;
+    margin: 0px 2px 0px 2px;
+    /*顺时针*/
+}
+
+#right_nav li a:hover{
+    color:#ddd;
+    cursor: pointer;
+}
+
+main{
+    width:100%;
+}
+
+article{
+    width:auto;
+    margin:20px 20px 20px 20px;
+    padding:20px 20px 20px 20px;
+    background-color: #FFF;
+    box-shadow: 3px 3px 2px #333;
+}
+
+article hgroup h2{
+    margin: 20px 0px 20px 0px;
+}
+article hgroup h3{
+    margin: 20px 0px 20px 0px;
+}
+.content p{
+    text-indent: 2em;
+}
+.img-ctrl {
+    width:15%;
+    height: auto;
+}
+.none-style{
+    padding:20px 0px 0px 0px;
+    list-style-type: none;
+    text-indent: 2em;
+}
+.pic-content figure{
+    border : 1px solid #bbb;
+    margin:16px 40px 16px 40px;
+    padding:10px 10px 10px 10px;
+    width:160px;
+    text-align: center;
+}
+.pic-content figure img{
+    width:100%;
+    margin:10px 0px 0px 0px ;
+    height:auto;
+}
+ol{
+    padding:20px 0px 20px 40px;
+}
+.table-ctrl{
+    width:100%;
+    border-color: #ddd;
+    border-collapse: collapse;
+}
+.table-ctrl thead{
+    background-color: #222;
+    color: #FFF;
+}
+.table-ctrl td {
+    padding:5px 5px 5px 5px;
+}
+.table-total{
+    background-color: #bbb;
+    font-weight: bold;
+}
+
+.form-ctrl{
+    width:100%;
+}
+.row{
+    width:100%;
+    padding:20px 0px 20px 0px;
+}
+.row-col-4{
+    width:25%;
+}
+.row-col-8{
+    width:75%;
+}
+
+.row-col-4, .row-col-8{
+    float:left;
+}
+.form-left{
+    text-align: right;
+}
+.form-left label{
+    padding:20px 20px 20px 20px;
+}
+.form-right{
+    float: right;
+    margin:0px 0px 0px 0px;
+}
+textarea{
+    width:100%;
+    height:100px;
+    font-size: 16px;
+}
+.btn{
+    padding:10px 0px 10px 0px;
+    background-color: #3355D0;
+    color:#FFF;
+    border-radius:10px;
+}
+
+.left-shadow{
+    padding: 0px 0px 0px 20px;
+    box-shadow: -3px 0px #888;
+}
+.hits{
+    color:#666;
 }
